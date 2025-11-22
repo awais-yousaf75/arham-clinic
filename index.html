@@ -51,20 +51,6 @@
         <div class="container">
             <h2 class="section-title">Meet Our Specialists</h2>
             <div class="doctors-grid">
-                <!-- Dr. Khalid Supra -->
-                <div class="doctor-card">
-                    <div class="doctor-img-container">
-                        <img src="assets/image_4.png" alt="Dr. Khalid Mahmood Supra" class="doctor-img">
-                    </div>
-                    <div class="doctor-info">
-                        <h3>Dr. Khalid Mahmood Sipra</h3>
-                        <span class="specialty">Dental Surgeon</span>
-                        <p class="qualifications">BDS(de'Mont), C' Implant, C' Orth (Pak)</p>
-                        <p class="specialist">Specialist in Orthodontics</p>
-                        <p class="timings"><i class="far fa-clock"></i> 10:00 AM - 8:00 PM (Sun Off)</p>
-                    </div>
-                </div>
-
                 <!-- Dr. Rizwana -->
                 <div class="doctor-card">
                     <div class="doctor-img-container">
@@ -80,6 +66,19 @@
                         <p class="timings"><i class="far fa-clock"></i> 3:00 PM - 7:00 PM (Sun Off)</p>
                     </div>
                 </div>
+                <!-- Dr. Khalid Supra -->
+                <div class="doctor-card">
+                    <div class="doctor-img-container">
+                        <img src="assets/image_4.png" alt="Dr. Khalid Mahmood Supra" class="doctor-img">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Khalid Mahmood Sipra</h3>
+                        <span class="specialty">Dental Surgeon</span>
+                        <p class="qualifications">BDS(de'Mont), C' Implant, C' Orth (Pak)</p>
+                        <p class="specialist">Specialist in Orthodontics</p>
+                        <p class="timings"><i class="far fa-clock"></i> 10:00 AM - 8:00 PM (Fri Off)</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -88,91 +87,139 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Services
+                </button>
+                <button class="filter-btn" data-filter="gynae">
+                    <i class="fas fa-female"></i> Gynecology
+                </button>
+                <button class="filter-btn" data-filter="dental">
+                    <i class="fas fa-tooth"></i> Dentistry
+                </button>
+                <button class="filter-btn" data-filter="hospital">
+                    <i class="fas fa-hospital"></i> Hospital Facilities
+                </button>
+            </div>
+
+            <div class="services-container">
+                <!-- Gynecology Services -->
+                <div class="service-category" data-category="gynae">
+                    <h3 class="category-title">
+                        <i class="fas fa-female"></i> Gynecology Services
+                    </h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-baby-carriage service-icon"></i>
+                            <h3>Infertility Treatment</h3>
+                            <p>Specialized treatment for infertility.</p>
+                        </div>
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-hand-holding-heart service-icon"></i>
+                            <h3>Painless Delivery</h3>
+                            <p>Normal delivery without pain.</p>
+                        </div>
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-user-md service-icon"></i>
+                            <h3>C-Section</h3>
+                            <p>Major and minor operations (C-Section).</p>
+                        </div>
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-female service-icon"></i>
+                            <h3>Women's Health</h3>
+                            <p>Treatment for uterus problems and tumors.</p>
+                        </div>
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-heartbeat service-icon"></i>
+                            <h3>CTG Machine</h3>
+                            <p>Advanced monitoring for mother and baby.</p>
+                        </div>
+                        <div class="service-card" data-category="gynae">
+                            <i class="fas fa-stethoscope service-icon"></i>
+                            <h3>Prenatal Care</h3>
+                            <p>Complete pregnancy care and consultation.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Dental Services -->
-                <div class="service-card">
-                    <i class="fas fa-teeth service-icon"></i>
-                    <h3>Dental Implants</h3>
-                    <p>Permanent solution for missing teeth.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-teeth-open service-icon"></i>
-                    <h3>Braces (Orthodontics)</h3>
-                    <p>Fixing braces for teeth alignment.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tooth service-icon"></i>
-                    <h3>Root Canal</h3>
-                    <p>Complete root canal treatment.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-magic service-icon"></i>
-                    <h3>Teeth Whitening</h3>
-                    <p>Professional teeth whitening services.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tools service-icon"></i>
-                    <h3>Scaling & Polishing</h3>
-                    <p>Deep cleaning and polishing of teeth.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-smile service-icon"></i>
-                    <h3>Crowns & Bridges</h3>
-                    <p>Fixed teeth and bridges.</p>
-                </div>
-
-                <!-- Gynae Services -->
-                <div class="service-card">
-                    <i class="fas fa-baby-carriage service-icon"></i>
-                    <h3>Infertility Treatment</h3>
-                    <p>Specialized treatment for infertility.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-heart service-icon"></i>
-                    <h3>Painless Delivery</h3>
-                    <p>Normal delivery without pain.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-user-md service-icon"></i>
-                    <h3>C-Section</h3>
-                    <p>Major and minor operations (C-Section).</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-female service-icon"></i>
-                    <h3>Women's Health</h3>
-                    <p>Treatment for uterus problems and tumors.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-heartbeat service-icon"></i>
-                    <h3>CTG Machine</h3>
-                    <p>Advanced monitoring for mother and baby.</p>
+                <div class="service-category" data-category="dental">
+                    <h3 class="category-title">
+                        <i class="fas fa-tooth"></i> Dental Services
+                    </h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-teeth service-icon"></i>
+                            <h3>Dental Implants</h3>
+                            <p>Permanent solution for missing teeth.</p>
+                        </div>
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-teeth-open service-icon"></i>
+                            <h3>Braces (Orthodontics)</h3>
+                            <p>Fixing braces for teeth alignment.</p>
+                        </div>
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-tooth service-icon"></i>
+                            <h3>Root Canal</h3>
+                            <p>Complete root canal treatment.</p>
+                        </div>
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-magic service-icon"></i>
+                            <h3>Teeth Whitening</h3>
+                            <p>Professional teeth whitening services.</p>
+                        </div>
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-tools service-icon"></i>
+                            <h3>Scaling & Polishing</h3>
+                            <p>Deep cleaning and polishing of teeth.</p>
+                        </div>
+                        <div class="service-card" data-category="dental">
+                            <i class="fas fa-smile service-icon"></i>
+                            <h3>Crowns & Bridges</h3>
+                            <p>Fixed teeth and bridges.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Facilities -->
-                <div class="service-card">
-                    <i class="fas fa-procedures service-icon"></i>
-                    <h3>Operation Theater</h3>
-                    <p>Modern operation theater facilities.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-bed service-icon"></i>
-                    <h3>Private Rooms</h3>
-                    <p>Modern private rooms and wards.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microscope service-icon"></i>
-                    <h3>Laboratory</h3>
-                    <p>Modern laboratory services.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-pills service-icon"></i>
-                    <h3>Medical Store</h3>
-                    <p>In-house pharmacy.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-ambulance service-icon"></i>
-                    <h3>Emergency</h3>
-                    <p>Emergency services available.</p>
+                <!-- Hospital Facilities -->
+                <div class="service-category" data-category="hospital">
+                    <h3 class="category-title">
+                        <i class="fas fa-hospital"></i> Hospital Facilities
+                    </h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-procedures service-icon"></i>
+                            <h3>Operation Theater</h3>
+                            <p>Modern operation theater facilities.</p>
+                        </div>
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-bed service-icon"></i>
+                            <h3>Private Rooms</h3>
+                            <p>Modern private rooms and wards.</p>
+                        </div>
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-microscope service-icon"></i>
+                            <h3>Laboratory</h3>
+                            <p>Modern laboratory services.</p>
+                        </div>
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-pills service-icon"></i>
+                            <h3>Medical Store</h3>
+                            <p>In-house pharmacy.</p>
+                        </div>
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-ambulance service-icon"></i>
+                            <h3>Emergency</h3>
+                            <p>Emergency services available.</p>
+                        </div>
+                        <div class="service-card" data-category="hospital">
+                            <i class="fas fa-x-ray service-icon"></i>
+                            <h3>Diagnostic Services</h3>
+                            <p>Complete diagnostic facilities.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,26 +230,68 @@
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Ghareeb Pura Road, Gujrat</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Ghareeb Pura Road, Gujrat</p>
+                                <a href="https://maps.app.goo.gl/SH9yDQdM4BhHPBbt7" target="_blank"
+                                    class="view-map-link">
+                                    <i class="fas fa-external-link-alt"></i> View on Map
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:03006234939">0300-6234939</a></p>
+                                <p><a href="tel:0533520465">053-3520465</a></p>
+                                <p><a href="tel:0533513913">053-3513913</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:khalidsipra2@gmail.com">khalidsipra2@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon-Sat: 10:00 AM - 8:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>0300-6234939<br>053-3520465</p>
+
+                    <!-- Map Container -->
+                    <div class="map-container">
+                        <div class="map-header">
+                            <h3><i class="fas fa-map-marked-alt"></i> Find Us Here</h3>
+                            <a href="https://maps.app.goo.gl/SH9yDQdM4BhHPBbt7" target="_blank"
+                                class="map-direction-btn">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:Khalidsipra2@gmail.com">Khalidsipra2@gmail.com</a>
+                        <!-- Google Maps Embed -->
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.244308804928!2d74.07720496955588!3d32.59130039999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f0664ddf4bac3%3A0xd326ec10f39b0e47!2sArham%20Clinic!5e0!3m2!1sen!2s!4v1735000000000!5m2!1sen!2s"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <!-- Map Overlay with Marker -->
+                            <div class="map-overlay">
+                                <a href="https://maps.app.goo.gl/SH9yDQdM4BhHPBbt7" target="_blank" class="map-marker">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Arham Clinic</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
