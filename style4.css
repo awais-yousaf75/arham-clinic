@@ -21,11 +21,21 @@
     cursor: auto;
     /* Fixed: Ensure default cursor is visible */
 }
+/* Prevent auto-scroll on page load */
+
+
+/* Re-enable smooth scroll after page load */
+html.loaded {
+    scroll-behavior: smooth;
+}
+
+
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: auto;
+     scroll-behavior: auto;
     /* Fixed: Ensure default cursor */
 }
 
@@ -38,6 +48,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: auto;
+     overflow-x: hidden;
     /* Fixed: Ensure default cursor */
 }
 
@@ -2707,7 +2718,7 @@ footer::before {
     color: #FFD700;
 }
 
-.featured-content > p {
+.featured-content>p {
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.6;
@@ -2819,7 +2830,7 @@ footer::before {
         margin-bottom: 0.8rem;
     }
 
-    .featured-content > p {
+    .featured-content>p {
         font-size: 0.9rem;
     }
 
@@ -2837,6 +2848,7 @@ footer::before {
 }
 
 @media (max-width: 480px) {
+
     .service-card.featured-card,
     .service-card.special-card {
         margin: 0 5px;
@@ -2865,10 +2877,21 @@ footer::before {
     animation: slideInLeft 0.4s ease forwards;
 }
 
-.service-card:hover .service-features li:nth-child(1) { animation-delay: 0.1s; }
-.service-card:hover .service-features li:nth-child(2) { animation-delay: 0.2s; }
-.service-card:hover .service-features li:nth-child(3) { animation-delay: 0.3s; }
-.service-card:hover .service-features li:nth-child(4) { animation-delay: 0.4s; }
+.service-card:hover .service-features li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:hover .service-features li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:hover .service-features li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-card:hover .service-features li:nth-child(4) {
+    animation-delay: 0.4s;
+}
 
 .service-card .service-features li {
     opacity: 1;
@@ -2881,10 +2904,13 @@ footer::before {
 }
 
 @keyframes sparkle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.2);
         opacity: 0.8;

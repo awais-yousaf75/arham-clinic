@@ -1,17 +1,35 @@
+// Force scroll to top on page load
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
+// Also on page refresh
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+};
+
+// Prevent hash-based scrolling on load
+if (window.location.hash) {
+    setTimeout(() => {
+        window.history.replaceState(null, null, ' ');
+        window.scrollTo(0, 0);
+    }, 0);
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Loading Screen
-    // const loadingScreen = document.createElement('div');
-    // loadingScreen.className = 'loading-screen';
-    // loadingScreen.innerHTML = '<div class="loader"></div>';
-    // document.body.appendChild(loadingScreen);
-
-    // window.addEventListener('load', () => {
-    //     setTimeout(() => {
-    //         loadingScreen.classList.add('hidden');
-    //         setTimeout(() => loadingScreen.remove(), 500);
-    //     }, 1000);
-    // });
-
+   
+ window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // Enable smooth scroll after load
+    setTimeout(() => {
+        document.documentElement.classList.add('loaded');
+    }, 100)
     // Mobile Menu Toggle with Animation
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
