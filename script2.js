@@ -463,4 +463,65 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', loadMap);
         loadMap(); // Check on initial load
     }
+
+    // ============================================
+    // PROFESSIONAL VIDEO AUTOPLAY
+    // ============================================
+
+    const videoWrapper = document.querySelector('.video-wrapper');
+    const video = document.querySelector('.clinic-video');
+
+    // Add loading class initially
+    if (videoWrapper) {
+        videoWrapper.classList.add('loading');
+    }
+
+    // For local video
+    if (video) {
+        // Remove all controls
+        video.controls = false;
+        video.removeAttribute('controls');
+
+        // Autoplay when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play().catch(e => console.log('Autoplay prevented'));
+                    videoWrapper.classList.remove('loading');
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(video);
+
+        // Prevent right-click on video
+        video.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+    }
+
+    // For iframe - remove loading when loaded
+    const iframe = document.querySelector('.video-wrapper iframe');
+    if (iframe) {
+        iframe.addEventListener('load', () => {
+            videoWrapper.classList.remove('loading');
+        });
+
+        // Lazy load iframe
+        const loadVideo = () => {
+            const rect = videoWrapper.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                if (!iframe.src || iframe.src === 'about:blank') {
+                    iframe.src = iframe.getAttribute('data-src') || iframe.src;
+                }
+                window.removeEventListener('scroll', loadVideo);
+            }
+        };
+
+        window.addEventListener('scroll', loadVideo);
+        loadVideo();
+    }
 });

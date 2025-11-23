@@ -392,7 +392,7 @@ ul {
 .hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        url('assets/reception.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -563,7 +563,7 @@ ul {
 
 /* Enhanced Services Section */
 .services-section {
-    padding: 4rem 0;
+    padding: 2rem 0 0 0;
     background-color: var(--white) !important;
     position: relative;
 }
@@ -2228,5 +2228,665 @@ footer::before {
         white-space: normal;
         max-width: 80%;
         text-align: center;
+    }
+}
+
+/* Video with autoplay styles */
+.video-player {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle animation for autoplay video */
+.video-player::before {
+    content: 'Video Playing';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    z-index: 10;
+    animation: fadeInOut 3s ease;
+    pointer-events: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Volume control button (optional) */
+.volume-control {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.volume-control:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Autoplay indicator */
+.autoplay-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+    z-index: 10;
+}
+
+/* ============================================
+   PROFESSIONAL VIDEO SECTION
+   ============================================ */
+
+.video-section {
+    padding: 1rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background */
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    /* background: radial-gradient(circle, rgba(211, 47, 47, 0.08) 0%, transparent 70%); */
+    border-radius: 50%;
+}
+
+.video-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(211, 47, 47, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Video Header */
+.video-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+.video-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    margin: 0 auto 1rem;
+    border-radius: 2px;
+    position: relative;
+}
+
+.title-underline::before,
+.title-underline::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: rgba(211, 47, 47, 0.3);
+    border-radius: 2px;
+    top: 0;
+}
+
+.title-underline::before {
+    left: -50px;
+}
+
+.title-underline::after {
+    right: -50px;
+}
+
+.video-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Video Content Container */
+.video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Video Wrapper - Centered and Sized */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* Controlled width */
+    margin: 0 auto;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    animation: fadeInScale 1s ease 0.3s both;
+}
+
+/* Video Frame Decoration */
+.video-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0.5;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+}
+
+/* Video Frame Border */
+.video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Video Aspect Ratio Container */
+.video-wrapper iframe,
+.video-wrapper video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Hide all video controls for local video */
+.clinic-video {
+    pointer-events: none;
+    /* Prevents interaction */
+}
+
+.clinic-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.clinic-video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.clinic-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.clinic-video::-moz-media-controls {
+    display: none !important;
+}
+
+/* Professional Loading State */
+.video-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: videoLoad 1s linear infinite;
+    display: none;
+}
+
+.video-wrapper.loading::after {
+    display: block;
+}
+
+@keyframes videoLoad {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .video-wrapper {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 4rem 0;
+    }
+
+    .video-title {
+        font-size: 2rem;
+    }
+
+    .video-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .video-header {
+        margin-bottom: 3rem;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+        margin: 0 20px;
+        border-radius: 15px;
+    }
+
+    .video-wrapper iframe,
+    .video-wrapper video {
+        border-radius: 15px;
+    }
+
+    .title-underline::before,
+    .title-underline::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section {
+        padding: 3rem 0;
+    }
+
+    .video-title {
+        font-size: 1.5rem;
+    }
+
+    .video-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .video-wrapper {
+        margin: 0 15px;
+        border-radius: 12px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Optional: Subtle play indicator */
+.video-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: #00ff00;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+    z-index: 2;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Clean, minimal style */
+.video-content {
+    padding: 2rem;
+    background: radial-gradient(circle at center, rgba(211, 47, 47, 0.03) 0%, transparent 50%);
+    border-radius: 30px;
+}
+
+/* ============================================
+   ENHANCED DENTAL SERVICE CARDS
+   ============================================ */
+
+/* Featured Service Card with Details */
+.service-card.featured-card {
+    grid-column: span 1;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    border: 2px solid var(--primary-color);
+    position: relative;
+    padding: 2rem 1.5rem;
+}
+
+.service-card.featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-primary);
+}
+
+.featured-header {
+    border-bottom: 2px solid rgba(211, 47, 47, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featured-header .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.featured-header h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.featured-content {
+    text-align: left;
+}
+
+.featured-content h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.featured-content h4 i {
+    font-size: 1rem;
+    color: #FFD700;
+}
+
+.featured-content > p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Service Features List */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    padding: 0.6rem 0;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.service-features li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.service-features li strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Special Service Card with Badge (Invisible Braces) */
+.service-card.special-card {
+    position: relative;
+    overflow: visible;
+    border: 2px solid #4CAF50;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f8f4 100%);
+}
+
+.special-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+}
+
+.special-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    animation: pulse 2s infinite;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.special-card .service-icon {
+    color: #4CAF50;
+}
+
+/* Hover Effects for Featured Cards */
+.service-card.featured-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(211, 47, 47, 0.2);
+    border-color: #B71C1C;
+}
+
+.service-card.special-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+    border-color: #45a049;
+}
+
+/* Responsive Design for Featured Cards */
+@media (max-width: 768px) {
+    .service-card.featured-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .featured-header {
+        padding-bottom: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .featured-header .service-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .featured-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .featured-content h4 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .featured-content > p {
+        font-size: 0.9rem;
+    }
+
+    .service-features li {
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+    }
+
+    .special-badge {
+        top: -10px;
+        right: -10px;
+        padding: 5px 14px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card.featured-card,
+    .service-card.special-card {
+        margin: 0 5px;
+    }
+
+    .featured-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .service-features li {
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .special-badge {
+        top: -8px;
+        right: -8px;
+        padding: 4px 12px;
+        font-size: 0.65rem;
+    }
+}
+
+/* Animation for service features */
+.service-features li {
+    opacity: 0;
+    animation: slideInLeft 0.4s ease forwards;
+}
+
+.service-card:hover .service-features li:nth-child(1) { animation-delay: 0.1s; }
+.service-card:hover .service-features li:nth-child(2) { animation-delay: 0.2s; }
+.service-card:hover .service-features li:nth-child(3) { animation-delay: 0.3s; }
+.service-card:hover .service-features li:nth-child(4) { animation-delay: 0.4s; }
+
+.service-card .service-features li {
+    opacity: 1;
+    animation: none;
+}
+
+/* Premium indicator for Zirconia */
+.featured-content h4 i.fa-gem {
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
     }
 }
